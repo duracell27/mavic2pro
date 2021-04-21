@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Mavic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
@@ -13,8 +15,8 @@
         <div class="header__inner">
           <a class="logo" href="#">
             <picture class="logo__img">
-              <source srcset="logo-mobile.png" media="(max-width: 600px)" />
-              <img src="logo.png" alt="logo" />
+              <source srcset="images/logo-mobile.png" media="(max-width: 600px)" />
+              <img src="images/logo.png" alt="logo" />
             </picture>
           </a>
           <nav class="menu">
@@ -47,6 +49,7 @@
     </header>
 
     <section class="page-section top">
+      <div class="page-section__wrapper top__wrapper">
       <div class="container">
         <div class="top__inner">
           <h1 class="top__title">Mavic 2 Pro</h1>
@@ -57,30 +60,32 @@
           <ul class="top__social-list">
             <li class="top__social-item">
               <a class="top__social-link" href="#"
-                ><img src="images/facebook.svg" alt="img"
+                ><img src="images/social/facebook.svg" alt="img"
               /></a>
             </li>
             <li class="top__social-item">
               <a class="top__social-link" href="#"
-                ><img src="images/facebook.svg" alt="img"
+                ><img src="images/social/youtube.svg" alt="img"
               /></a>
             </li>
             <li class="top__social-item">
               <a class="top__social-link" href="#"
-                ><img src="images/facebook.svg" alt="img"
+                ><img src="images/social/instagram.svg" alt="img"
               /></a>
             </li>
           </ul>
         </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
+        <a href="#products">
           <img src="images/down.svg" alt="img" />
         </a>
       </div>
+    </div>
     </section>
 
-    <section class="page-section products">
+    <section id="products" class="page-section products">
+      <div class="page-section__wrapper top__wrapper">
       <div class="container">
         <h3 class="title products__title">Что такое Mavic 2 Pro?</h3>
         <div class="products__inner">
@@ -112,35 +117,35 @@
               </div>
               <div class="products__slider-item">
                 <img
-                  src="images/slider/02.jpg"
+                  src="images/slider/01.jpg"
                   alt="#"
                   class="products__slider-img"
                 />
               </div>
               <div class="products__slider-item">
                 <img
-                  src="images/slider/03.jpg"
+                  src="images/slider/01.jpg"
                   alt="#"
                   class="products__slider-img"
                 />
               </div>
               <div class="products__slider-item">
                 <img
-                  src="images/slider/04.jpg"
+                  src="images/slider/01.jpg"
                   alt=""
                   class="products__slider-img"
                 />
               </div>
               <div class="products__slider-item">
                 <img
-                  src="images/slider/05.jpg"
+                  src="images/slider/01.jpg"
                   alt="#"
                   class="products__slider-img"
                 />
               </div>
               <div class="products__slider-item">
                 <img
-                  src="images/slider/06.jpg"
+                  src="images/slider/01.jpg"
                   alt="#"
                   class="products__slider-img"
                 />
@@ -150,13 +155,15 @@
         </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
+        <a href="#benefits">
           <img src="images/down.svg" alt="img" />
         </a>
       </div>
+    </div>
     </section>
 
-    <section class="page-section benefits">
+    <section id="benefits" class="page-section benefits">
+      <div class="page-section__wrapper top__wrapper">
       <div class="container">
         <h3 class="title">Преимущества</h3>
         <div class="benefits__items">
@@ -216,13 +223,15 @@
         </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
+        <a href="#specification">
           <img src="images/down.svg" alt="img" />
         </a>
       </div>
+      </div>
     </section>
 
-    <section class="page-section specification">
+    <section id="specification" class="page-section specification">
+      <div class="page-section__wrapper top__wrapper">
       <div class="container">
         <h3 class="title">Характеристики</h3>
         <div class="specification__inner">
@@ -266,14 +275,16 @@
         </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
+        <a href="#questions">
           <img src="images/down.svg" alt="img" />
         </a>
       </div>
+      </div>
     </section>
 
-    <section class="page-section questions">
-      <div class="container">
+    <section id="questions" class="page-section questions">
+      <div class="page-section__wrapper top__wrapper">
+              <div class="container">
         <h3 class="title">Остались вопросы?</h3>
         <div class="questions__items">
           <div class="questions__item">
@@ -321,15 +332,17 @@
         </div>
       </div>
       <div class="scroll__btn">
-        <a href="#">
+        <a href="#contacts">
           <img src="images/down.svg" alt="img" />
         </a>
       </div>
+      </div>
     </section>
 
-    <section class="page-section contacts">
+    <section id="contacts" class="page-section contacts">
+      <div class="page-section__wrapper top__wrapper">
       <div class="container">
-        <h3 class="title"></h3>
+        <h3 class="title">Контакты</h3>
         <div class="contacts__inner">
           <div class="contacts__info">
             <div class="contacts__info-box">
@@ -396,26 +409,22 @@
           <ul class="contacts__social-list">
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#"
-                ><img src="images/facebook.svg" alt="img"
+                ><img src="images/social/facebook.svg" alt="img"
               /></a>
             </li>
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#"
-                ><img src="images/facebook.svg" alt="img"
+                ><img src="images/social/youtube.svg" alt="img"
               /></a>
             </li>
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#"
-                ><img src="images/facebook.svg" alt="img"
+                ><img src="images/social/instagram.svg" alt="img"
               /></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="scroll__btn">
-        <a href="#">
-          <img src="images/down.svg" alt="img" />
-        </a>
       </div>
     </section>
 
