@@ -27,6 +27,7 @@
     border-radius: 3px;
     margin-right: 8px;
     cursor: pointer;
+    @extend %ubuntu-medium;
     transition: all 0.3s ease;
     &:hover {
       background-color: #fff;
@@ -136,7 +137,7 @@
     position: absolute;
     text-align: right;
     font-size: 24px;
-    line-height: 28;
+    line-height: 28px;
     @extend %ubuntu-medium;
     bottom: 30px;
     left: -250px;
@@ -183,43 +184,50 @@
       margin-left: 40px;
       transform: translateY(25px);
     }
-  }
-  &__item-1,
-  &__item-3 {
-    position: relative;
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    &:nth-child(3) {
+      margin-left: 30px;
+    }
+    &:nth-child(4) {
+      margin-left: 60px;
+    }
+    &:first-child,
+    &:nth-child(3) {
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+    &_:first-child {
+      &::before {
+        height: 48px;
+        width: 245px;
+        background-image: url(../images/line1.svg);
+        top: 31px;
+        right: -56px;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        height: 42px;
+        width: 254px;
+        background-image: url(../images/line3.svg);
+        top: 50px;
+        right: -55px;
+      }
+      &::after {
+        height: 62px;
+        width: 463px;
+        background-image: url(../images/line2.svg);
+        top: -70px;
+        right: -54px;
+      }
     }
   }
-  &__item-1 {
-    &::before {
-      height: 48px;
-      width: 245px;
-      background-image: url(../images/line1.svg);
-      top: 31px;
-      right: -56px;
-    }
-  }
-  &__item-3 {
-    &::before {
-      height: 39px;
-      width: 254px;
-      background-image: url(../images/line3.svg);
-      top: 50px;
-      right: -55px;
-    }
-    &::after {
-      height: 62px;
-      width: 463px;
-      background-image: url(../images/line2.svg);
-      top: -70px;
-      right: -54px;
-    }
-  }
+
   &__num {
     font-size: 36px;
     line-height: 41px;
@@ -253,6 +261,259 @@
   &__info-text {
     font-size: 15px;
     line-height: 1.3;
+  }
+}
+
+.specification {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+  }
+  &__item {
+  }
+  &__item--center {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &__box {
+    width: 280px;
+    position: relative;
+    margin-top: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__box-2 {
+    margin-top: 140px;
+  }
+  &__box-4 {
+    margin-top: 160px;
+  }
+  &__box-1::before {
+    background-image: url(../images/specs/1.svg);
+    width: 228px;
+    height: 120px;
+    right: -140px;
+    top: 16px;
+  }
+  &__box-2::before {
+    background-image: url(../images/specs/2.svg);
+    width: 350px;
+    height: 82px;
+    right: -308px;
+    top: -65px;
+  }
+  &__box-3::before {
+    background-image: url(../images/specs/3.svg);
+    width: 258px;
+    height: 103px;
+    left: -299px;
+    top: 16px;
+  }
+  &__box-4::before {
+    background-image: url(../images/specs/4.svg);
+    width: 124px;
+    height: 89px;
+    left: -172px;
+    top: -73px;
+  }
+
+  &__box-title {
+    font-size: 21px;
+    line-height: 28px;
+    @extend %ubuntu-bold;
+    margin-bottom: 10px;
+  }
+  &__box-text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+
+.questions {
+  width: 100%;
+  &__items {
+    max-width: 757px;
+    padding-bottom: 15px;
+  }
+  &__item-title {
+    line-height: 28px;
+    font-size: 21px;
+    @extend %ubuntu-medium;
+    color: rgba(#fff, 0.8);
+    padding: 20px 10px 24px 40px;
+
+    position: relative;
+    cursor: pointer;
+    &::after {
+      content: url(../images/acordeon.svg);
+      transform: rotate(180deg);
+      position: absolute;
+      right: -72px;
+      top: 0;
+      background-color: #fff;
+      width: 72px;
+      height: 71px;
+      text-align: center;
+      line-height: 62px;
+    }
+  }
+  &__item-text {
+    padding: 0 5px 75px 50px;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0px;
+    display: none;
+  }
+  &__item {
+    max-width: 690px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+    position: relative;
+    &:nth-child(3) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 319px;
+        height: 125px;
+        top: -33px;
+        right: -386px;
+        background-image: url(../images/mavic-half.png);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__item.questions__item--active {
+    .questions__item-text {
+      display: block;
+    }
+    .questions__item-title::after {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.contacts {
+  &__inner {
+    display: flex;
+  }
+  &__info {
+    width: 240px;
+    margin-right: 60px;
+    margin-left: 56px;
+  }
+  &__info-box {
+    margin-bottom: 30px;
+  }
+  &__info-title {
+    line-height: 24px;
+    font-size: 21px;
+    @extend %ubuntu-bold;
+    margin: 0 0 13px;
+  }
+  &__info-phone,
+  &__info-email {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  &__info-email:hover {
+    text-decoration: underline;
+  }
+  &__form {
+    width: 570px;
+    margin-right: 106px;
+  }
+  &__form-title {
+    line-height: 24px;
+    font-size: 21px;
+    @extend %ubuntu-bold;
+    margin: 0 0 13px;
+  }
+  &__form-text {
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 0 0 12px;
+  }
+  &__form-line {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form-input {
+    width: 49%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border: none;
+    @extend %ubuntu-regular;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+    outline: none;
+    &::placeholder{
+      color: rgba($color: #fff, $alpha: 0.4);
+    }
+  }
+  &__form-textarea {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    @extend %ubuntu-regular;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 15px;
+    width: 100%;
+    resize: none;
+    height: 144px;
+    color: #fff;
+    outline: none;
+    &::placeholder{
+      color: rgba($color: #fff, $alpha: 0.4);
+    }
+  }
+  &__form-btn {
+    color: #fff;
+    background-color: transparent;
+    padding: 9px 15px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-right: 8px;
+    cursor: pointer;
+    @extend %ubuntu-medium;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+  &__social-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__social-item{
+    margin: 14px 0;
+  }
+}
+
+.footer{
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+  &__copy{
+    text-align: right;
+    opacity: 0.64;
+    font-size: 13px;
+    line-height: 15px;
+    color: rgba($color: #fff, $alpha: 0.64);
+    @extend %ubuntu-light;
   }
 }
 
