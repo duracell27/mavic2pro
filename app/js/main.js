@@ -17,7 +17,13 @@ $('#fullpage').fullpage({
     sectionSelector: '.page-section',
     autoScrolling:true,
     scrollHorizontally: true,
-    
+    scrollOverflow: true,
+    anchors: ['top', 'products', 'benefits', 'specification', 'questions', 'contacts'],
+    menu: '#header__nav'
 });
+
+$('.menu__btn').on('click', function(){
+    $(this).toggleClass('menu__btn--active')
+})
   
 });
