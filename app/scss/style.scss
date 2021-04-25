@@ -156,7 +156,7 @@
   border: none;
   background-color: #fff;
   position: absolute;
-  bottom: -45px;
+  bottom: -48px;
   right: 0;
   cursor: pointer;
   z-index: 5;
@@ -207,7 +207,7 @@
         background-position: 0 0;
       }
     }
-    &_:first-child {
+    &:first-child {
       &::before {
         height: 48px;
         width: 245px;
